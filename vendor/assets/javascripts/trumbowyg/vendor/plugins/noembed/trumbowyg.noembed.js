@@ -20,19 +20,38 @@
     $.extend(true, $.trumbowyg, {
         langs: {
             en: {
-                noembed: 'noEmbed',
+                noembed: 'Noembed',
                 noembedError: 'Error'
+            },
+            da: {
+                noembedError: 'Fejl'
             },
             sk: {
                 noembedError: 'Chyba'
             },
             fr: {
-                noembed: 'noEmbed',
                 noembedError: 'Erreur'
             },
             cs: {
                 noembedError: 'Chyba'
-            }
+            },
+            ru: {
+                noembedError: 'Ошибка'
+            },
+            ja: {
+                noembedError: 'エラー'
+            },
+            tr: {
+                noembedError: 'Hata'
+            },
+            zh_tw: {
+                noembed: '插入影片',
+                noembedError: '錯誤'
+            },
+            pt_br: {
+                noembed: 'Incorporar',
+                noembedError: 'Erro'
+            },
         },
 
         plugins: {
@@ -65,7 +84,7 @@
 
                                         success: trumbowyg.o.plugins.noembed.success || function (data) {
                                             if (data.html) {
-                                                trumbowyg.execCmd('insertHTML', $(data.html).unwrap().html());
+                                                trumbowyg.execCmd('insertHTML', data.html);
                                                 setTimeout(function () {
                                                     trumbowyg.closeModal();
                                                 }, 250);
