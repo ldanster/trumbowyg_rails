@@ -58,7 +58,6 @@
                     trumbowyg.o.plugins.fontfamily = trumbowyg.o.plugins.fontfamily || defaultOptions;
                     trumbowyg.addBtnDef('fontfamily', {
                         dropdown: buildDropdown(trumbowyg),
-                        hasIcon: false,
                         text: trumbowyg.lang.fontFamily
                     });
                 }

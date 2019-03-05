@@ -168,7 +168,6 @@
         $.each(sizes, function (index, size) {
             trumbowyg.addBtnDef('fontsize_' + size, {
                 text: '<span style="font-size: ' + size + ';">' + trumbowyg.lang.fontsizes[size] + '</span>',
-                hasIcon: false,
                 fn: function () {
                     trumbowyg.execCmd('fontSize', index + 1, true);
                 }
